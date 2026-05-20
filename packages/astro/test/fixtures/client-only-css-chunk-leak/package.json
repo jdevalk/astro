@@ -1,0 +1,11 @@
+{
+  "name": "@test/client-only-css-chunk-leak",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@astrojs/react": "workspace:*",
+    "astro": "workspace:*",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  }
+}
