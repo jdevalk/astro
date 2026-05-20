@@ -1,4 +1,5 @@
 import { readFile } from 'node:fs/promises';
+import { dirname } from 'node:path';
 import type { DepOptimizationConfig } from 'vite';
 
 const FRONTMATTER_RE = /^---\r?\n([\s\S]*?)\r?\n---/;
@@ -54,6 +55,7 @@ export function astroFrontmatterScanPlugin(): ESBuildPlugin {
 						return {
 							contents: contents + '\nexport default {}',
 							loader: 'ts',
+							resolveDir: dirname(args.path),
 						};
 					}
 				} catch {
@@ -64,6 +66,7 @@ export function astroFrontmatterScanPlugin(): ESBuildPlugin {
 				return {
 					contents: 'export default {}',
 					loader: 'ts',
+					resolveDir: dirname(args.path),
 				};
 			});
 		},
