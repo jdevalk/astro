@@ -1,5 +1,11 @@
 # astro
 
+## 6.3.8
+
+### Patch Changes
+
+- [#16831](https://github.com/withastro/astro/pull/16831) [`ace96ba`](https://github.com/withastro/astro/commit/ace96ba5024129cbeb9d8e75134f4f8bdf42a57a) Thanks [@astrobot-houston](https://github.com/astrobot-houston)! - Fixes a misleading `GetStaticPathsRequired` error when a redirect is configured from a dynamic route to a static (or less-dynamic) destination. For example, `'/project/[slug]': '/'` previously produced a confusing error pointing at `index.astro`. Astro now detects the parameter mismatch at config validation time and throws a clear `InvalidRedirectDestination` error naming the missing parameters.
+
 ## 6.3.7
 
 ### Patch Changes
