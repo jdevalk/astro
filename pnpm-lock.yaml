@@ -6925,10 +6925,10 @@ importers:
         specifier: ^4.21.0
         version: 4.21.0
 
-  triage/gh-16482:
+  triage/gh-16835:
     dependencies:
       astro:
-        specifier: workspace:*
+        specifier: ^6.3.7
         version: link:../../packages/astro
 
 packages:
